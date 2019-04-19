@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AlarmWMe</string>
+    <string name="hello_world_attendez_je_vais_tout_vous_expliquer">Hello World! Attendez...je vais tout vous expliquer...</string>
+    <string name="attendez_je_vais_tout_vous_expliquer">Attendez je vais tout_vous_expliquer</string>
+</resources>
