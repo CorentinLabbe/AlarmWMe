@@ -32,6 +32,9 @@ public class MainActivity extends Activity {
         controller.onCreate();
     }
 
+
+
+
     public void showList(List<Food> foodList) {
         // use this setting to
         // improve performance if you know that changes
@@ -44,7 +47,7 @@ public class MainActivity extends Activity {
         recyclerView.setLayoutManager(layoutManager);
         // define an adapter
         //Instanciation de mAdapter
-        mAdapter = new Adapter(foodList);
+        mAdapter = new Adapter(foodList,this);
         recyclerView.setAdapter(mAdapter);
     }
 }

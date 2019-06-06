@@ -1,5 +1,6 @@
 package com.example.alarmwme.view;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +12,13 @@ import com.example.alarmwme.R;
 import com.example.alarmwme.model.Food;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     private List<Food> values;
+    private Intent secondActivity;
+    private MainActivity mainActivity;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -45,8 +49,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public Adapter(List<Food> values) {
+    public Adapter(List<Food> values, MainActivity mainActivity) {
         this.values = values;
+        this.mainActivity = mainActivity;
     }
 
     // Create new views (invoked by the layout manager)
@@ -59,7 +64,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
+    private static final String SelectedFood = "Le Whisky est en approche";
+    public void SecondActivity(int position)
+    {
+        Intent secondActivity = new Intent(mainActivity, SecondActivity.class);
+        final Food selectedFood = values.get(position);
 
+        ArrayList<String> FoodDev = new ArrayList<>();
+        FoodDev.add(selectedFood.getRegion());
+        FoodDev.add(selectedFood.getPrice());
+        FoodDev.add(selectedFood.getRating());
+
+        secondActivity.putStringArrayListExtra(SelectedFood, FoodDev);
+        mainActivity.startActivity(secondActivity);
+    }
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
@@ -70,7 +88,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.txtHeader.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+                SecondActivity(position);
             }
         });
 
