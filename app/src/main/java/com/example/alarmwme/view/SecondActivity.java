@@ -8,29 +8,29 @@ import com.example.alarmwme.R;
 
 import java.util.ArrayList;
 
-    public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-        private static final String SelectedFood = "Le Whisky est en approche";
+    private static final String SelectedFood = "Le Whisky est en approche";
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main2);
-            AmiibogossYoupi();
-        }
-
-        public void AmiibogossYoupi() {
-            TextView regionView = findViewById(R.id.amiibogoss_header);
-            TextView priceView = findViewById(R.id.amiibogoss_gameseries);
-            TextView ratingView = findViewById(R.id.amiibogoss_detail);
-
-            ArrayList<String> AmiibogossFiesta = getIntent().getStringArrayListExtra(SelectedFood);
-
-            regionView.setText(AmiibogossFiesta.get(0));
-            priceView.setText(AmiibogossFiesta.get(1));
-            ratingView.setText(AmiibogossFiesta.get(2));
-        }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        Information();
     }
+
+    public void Information() {
+        TextView regionView = findViewById(R.id.region_detail);
+        TextView priceView = findViewById(R.id.price_detail);
+        TextView ratingView = findViewById(R.id.rating_detail);
+
+        ArrayList<String> Caracteristique = getIntent().getStringArrayListExtra(SelectedFood);
+
+        regionView.setText(Caracteristique.get(0));
+        priceView.setText(Caracteristique.get(1));
+        ratingView.setText(Caracteristique.get(2));
+    }
+}
 
 
 

@@ -76,6 +76,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         FoodDev.add(selectedFood.getRating());
 
         secondActivity.putStringArrayListExtra(SelectedFood, FoodDev);
+
         mainActivity.startActivity(secondActivity);
     }
     // Replace the contents of a view (invoked by the layout manager)
@@ -85,7 +86,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         // - replace the contents of the view with that element
         final Food selectedFood = values.get(position);
         holder.txtHeader.setText(selectedFood.getName());
-        holder.txtHeader.setOnClickListener(new OnClickListener() {
+        holder.layout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 SecondActivity(position);
