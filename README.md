@@ -15,11 +15,11 @@ Cette application affiche une liste de whisky et utilise l'API Whiskey List sur 
 # Fonctionnalitées
 
 Ecran Home
- - Affiche de la liste de Whiskey
+ - Affiche de la liste de Whisky
  
  ![alt tag](https://user-images.githubusercontent.com/49784411/59133590-ce326200-8978-11e9-9451-3810a6b0e6c7.jpg)
  
- Ecran de détail du Whiskey
- - Affiche du classement, du prix et région du whiskey sélectionné
+ Ecran de détail du Whisky
+ - Affiche du classement, du prix et région du whisky sélectionné
  
 ![alt tag](https://user-images.githubusercontent.com/49784411/59133598-d12d5280-8978-11e9-8b04-007dceaec20e.jpg)
