@@ -19,16 +19,7 @@ Ecran Home
  
  ![alt tag](https://user-images.githubusercontent.com/49784411/59133590-ce326200-8978-11e9-9451-3810a6b0e6c7.jpg)
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  Ecran de détail du Whiskey
  - Affiche le classement, le prix et la région du whiskey sélectionné
  
+![alt tag](https://user-images.githubusercontent.com/49784411/59133598-d12d5280-8978-11e9-8b04-007dceaec20e.jpg)
